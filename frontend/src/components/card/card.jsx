@@ -79,7 +79,7 @@ const Card = ({ data, updateModal, setRelatedBook }) => {
 
                     return <div key={index} className='list-items'>
                         <div className='image-container'>
-                            <img src={`${import.meta.env.VITE_BACKEND_URL}/${book.image}`}></img>
+                            <img src={book.image}></img>
                         </div>
                         <div className='list-details'>
                             <p className='title'><b>{book.title}</b></p>

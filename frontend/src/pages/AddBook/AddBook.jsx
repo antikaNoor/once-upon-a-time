@@ -37,7 +37,8 @@ function AddBook() {
                 .then((data) => {
                     const fullPath = data?.data;
 
-                    const commonPrefix = 'D:\\MERN_Antika_Noor\\backendForReact\\expressJs-practice-filter-fixed\\server\\';
+                    // const commonPrefix = 'D:\\MERN_Antika_Noor\\backendForReact\\expressJs-practice-filter-fixed\\server\\';
+                    const commonPrefix = '\\usr\\src\\app\\server';
                     const fileName = fullPath.replace(commonPrefix, '');
 
                     console.log('File Name:', fileName);
@@ -92,15 +93,16 @@ function AddBook() {
         console.log("The description ", getValues("description"));
         console.log("The price ", getValues("price"));
         console.log("The stock ", getValues("stock"));
+        console.log("The image ", getValues("image"));
         console.log("The branch ", data.branch);
         handleAddBook(data)
     };
 
-    useEffect(() => {
-        if (file && file[0]) {
-            handleFileApi();
-        }
-    }, [file]);
+    // useEffect(() => {
+    //     if (file && file[0]) {
+    //         handleFileApi();
+    //     }
+    // }, [file]);
 
     return (
         <>
@@ -306,15 +308,23 @@ function AddBook() {
                         </div>
 
                         <div className='form-items'>
-                            <h4>Image</h4>
-                            <input
-                                type="file"
-                                onChange={handleFileChange}
+                            <h4>Image URL</h4>
+                            <Controller
+                                name="image"
+                                control={control}
+                                render={({ field }) => (
+                                    <input
+                                        placeholder="Enter image url"
+                                        {...field}
+                                        style={{ border: errors.image ? "1px solid red" : "" }}
+                                    />
+                                )}
                             />
+                            {errors.image && <h5>{errors.image.message}</h5>}
                         </div>
 
                     </div>
-                    <button className="btn" type="submit" disabled={isLoading}>Add</button>
+                    <button className="btn" type="submit">Add</button>
 
 
                 </form>
