@@ -8917,3 +8917,4 @@
 ::1 - - [23/Oct/2023:09:26:56 +0000] "GET /cart/show-my-cart HTTP/1.1" 500 109 "http://localhost:5173/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/118.0.0.0 Safari/537.36"
 ::1 - - [23/Oct/2023:09:33:58 +0000] "GET /book/get-all-books?page=1&limit=6&sortParam=&sortOrder=&priceMin=0&priceMax=1000&search= HTTP/1.1" 304 - "http://localhost:5173/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/118.0.0.0 Safari/537.36"
 ::1 - - [23/Oct/2023:09:34:01 +0000] "GET /book/get-all-books?page=1&limit=6&sortParam=&sortOrder=&priceMin=0&priceMax=1000&search= HTTP/1.1" 304 - "http://localhost:5173/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/118.0.0.0 Safari/537.36"
+::1 - - [30/Oct/2023:09:13:54 +0000] "POST /auth/login HTTP/1.1" 400 67 "-" "PostmanRuntime/7.34.0"
